@@ -79,9 +79,9 @@
     if (todo.value != '') {
       item.todo = todo.value;
     } else {
-      item.todo = 'オリンパス';
-      // window.alert('todo項目を入力してください');
-      // return;
+      // item.todo = 'オリンパス';
+      window.alert('todo項目を入力してください');
+      return;
     }
     // 優先度
     item.priority =priority.value;
@@ -89,11 +89,11 @@
     if (deadline.value != '') {
       item.deadline = deadline.value;
     } else {
-      item.deadline = new Date().toLocaleDateString().replace('/\//g', '-');
+      // item.deadline = new Date().toLocaleDateString().replace('/\//g', '-');
       //new Date()は「日時」を扱うオブジェクト
       //newでインスタンスを生成。「インスタンス」はオブジェクトを表す定数/変数のようなもの
-      // window.alert('期日を入力してください');
-      // return;
+      window.alert('期日を入力してください');
+      return;
     }
     // 完了
     item.done = false; // 完了はひとまずBoolean値で設定
@@ -166,7 +166,7 @@
   const br = document.createElement('br'); // 改行したい
   main.appendChild(br);
   main.appendChild(remove);
-  
+
   // 未完了のtodoを残す処理
   remove.addEventListener('click', () => {
     clearTable(); // TODOリストを一旦削除
