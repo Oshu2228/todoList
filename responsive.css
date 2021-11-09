@@ -1,8 +1,13 @@
-@media  (max-width: 500px){
-
-  main{
-    width: 345px;
-  }
-
+@media  (min-width: 500px){
+  .br-sp{
+  display: none;
 }
-  
+}
+
+@media  (max-width: 500px){
+  main{
+    width: 320px;
+    /* padding: 20px 20px 50px; */
+  }
+ 
+}
