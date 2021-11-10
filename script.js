@@ -76,12 +76,15 @@
     // ※ここじゃないと下にリセット用のtodo.value = '';があるから処理できない
     // returnがないとそのまま表に反映されてしまう
     // todo
-    if (todo.value != '') {
-      item.todo = todo.value;
-    } else {
-      // item.todo = 'オリンパス';
+    if (todo.value.length  < 1 ) {
       window.alert('todo項目を入力してください');
       return;
+    } else if(todo.value.length < 2){
+      window.alert('todo項目は2文字以上で入力してください');
+      return;
+    }else{
+      item.todo = todo.value;
+      // item.todo = 'オリンパス';
     }
     // 優先度
     item.priority =priority.value;
